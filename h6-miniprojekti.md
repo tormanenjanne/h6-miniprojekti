@@ -30,13 +30,14 @@ sekä viimeisenä site.yml tiedosto.
 
 <img width="1092" height="183" alt="kuva" src="https://github.com/user-attachments/assets/c7499b30-f213-4f27-8055-2868ab0c7b4b" />
 
+Tässä otetaan yhteys paikallisesti, koska olen lisänyt ssh-avaimen jo.
+
 Seuraavaksi luodaan main.yml tiedosto komennolla `micro roles/media/tasks/main.yml`. ja rakenne näyttää siellä tältä.
 
 <img width="790" height="116" alt="kuva" src="https://github.com/user-attachments/assets/9c9e2d57-9295-4d1a-8c42-96ac7df6a33c" />
 
 Tässä on hyödynnetty ansible files dokumentin pohjaa hieman soveltaen. (ansible-builtin.file)
 
-Onnistunut ajo
 
 Lopuksi lisätään vielä loput hakemistot eli: elokuvat, sarjat ja musiikki. Käytännössä tässä noudatetaan samaa hakemistorakennetta kuin /srv/media hakemistorakenteen luomisessa.
 
