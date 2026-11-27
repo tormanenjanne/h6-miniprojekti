@@ -1,0 +1,23 @@
+- name: Luodaan hakemistorakenne jos sitä ei ole vielä olemassa
+  ansible.builtin.file:
+    path: /srv/media
+    state: directory
+    mode: '0755'
+    
+- name: elokuvahakemisto
+  ansible.builtin.file:
+    path: /srv/media/elokuvat
+    state: directory
+    mode: '0755'
+
+- name: musiikkihakemisto
+  ansible.builtin.file:
+    path: /srv/media/musiikki
+    state: directory
+    mode: '0755'
+
+- name: sarjathakemisto
+  ansible.builtin.file:
+    path: /srv/media/sarjat
+    state: directory
+    mode: '0755'        
