@@ -37,7 +37,7 @@ Seuraavaksi luodaan main.yml tiedosto komennolla `micro roles/media/tasks/main.y
 <img width="790" height="116" alt="kuva" src="https://github.com/user-attachments/assets/9c9e2d57-9295-4d1a-8c42-96ac7df6a33c" />
 
 Tässä on hyödynnetty ansible files dokumentin pohjaa hieman soveltaen. 
-- path: luodaan tämä kyseinen hakemistopolku
+- path: luodaan tämä kyseinen hakemistopolku. srv on luoto tähän siksi, jotta se käsittelee tämän kyseisen palvelun tietoja (Linux filesystem hierarchy)
 - state: Kohteena on hakemisto, ja se luo tämän hakemiston
 - mode: määritellään oikeudet: omistajalle kaikki oikeudet (rwx), ryhmälle (rx) ja muille (rx)
 (ansible-builtin.file)
@@ -68,4 +68,6 @@ komennolla tree /srv/media näyttää, että hakemistot ollaan nyt lisätty. Sek
 ## Lähteet
 - ansible-builtin-file.ansible.builtin.file module – Manage files and file properties. Luettavissa: https://docs.ansible.com/projects/ansible/latest/collections/ansible/builtin/file_module.html. Luettu: 27.11.2026.
 .- Karvinen 2026. SSH public key - Login without password. Luettavissa: https://terokarvinen.com/ssh-public-key-login-without-password/. Luettu: 27.11.2026.
+  
+  
 
