@@ -22,6 +22,8 @@ git clone git@github.com:tormanenjanne/h6-miniprojekti.git
 Seuraavaksi luodaan hosts.ini tiedostot sekä ansible.cfg tiedostot.
 <img width="416" height="82" alt="kuva" src="https://github.com/user-attachments/assets/3b48c3da-c960-402d-b98c-9b5d1ef53df8" />
 
+
+
 <img width="715" height="100" alt="kuva" src="https://github.com/user-attachments/assets/6790dfb2-93c1-4316-8581-43d798cc2701" />
 
 sekä viimeisenä site.yml tiedosto.
