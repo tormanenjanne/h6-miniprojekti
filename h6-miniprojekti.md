@@ -36,7 +36,11 @@ Seuraavaksi luodaan main.yml tiedosto komennolla `micro roles/media/tasks/main.y
 
 <img width="790" height="116" alt="kuva" src="https://github.com/user-attachments/assets/9c9e2d57-9295-4d1a-8c42-96ac7df6a33c" />
 
-Tässä on hyödynnetty ansible files dokumentin pohjaa hieman soveltaen. (ansible-builtin.file)
+Tässä on hyödynnetty ansible files dokumentin pohjaa hieman soveltaen. 
+- path: luodaan tämä kyseinen hakemistopolku
+- state: Kohteena on hakemisto, ja se luo tämän hakemiston
+- mode: määritellään oikeudet: omistajalle kaikki oikeudet (rwx), ryhmälle (rx) ja muille (rx)
+(ansible-builtin.file)
 
 
 Lopuksi lisätään vielä loput hakemistot eli: elokuvat, sarjat ja musiikki. Käytännössä tässä noudatetaan samaa hakemistorakennetta kuin /srv/media hakemistorakenteen luomisessa.
