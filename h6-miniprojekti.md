@@ -67,7 +67,8 @@ komennolla tree /srv/media näyttää, että hakemistot ollaan nyt lisätty. Sek
 
 ## Lähteet
 - ansible-builtin-file.ansible.builtin.file module – Manage files and file properties. Luettavissa: https://docs.ansible.com/projects/ansible/latest/collections/ansible/builtin/file_module.html. Luettu: 27.11.2026.
-.- Karvinen 2026. SSH public key - Login without password. Luettavissa: https://terokarvinen.com/ssh-public-key-login-without-password/. Luettu: 27.11.2026.
+- Karvinen 2026. SSH public key - Login without password. Luettavissa: https://terokarvinen.com/ssh-public-key-login-without-password/. Luettu: 27.11.2026.
+- Linux filesystem hierarchy. 1.19. /srv. Luettavissa: https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/srv.html. Luettu: 27.11.2026
   
   
 
