@@ -57,6 +57,8 @@ komennolla tree /srv/media näyttää, että hakemistot ollaan nyt lisätty. Sek
 
 <img width="1093" height="279" alt="kuva" src="https://github.com/user-attachments/assets/e6f182a3-6cc5-456d-ba50-46ec235a9d39" />
 
+## Palomuurin asennus
+
 
 
 
