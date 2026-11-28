@@ -59,13 +59,13 @@ komennolla tree /srv/media näyttää, että hakemistot ollaan nyt lisätty. Sek
 
 ## Palomuurin asennus, http- ja https liikenteen salliminen sekä palomuurin käyttöönotto koneen käynnistäessä
 
-Ajakaa komento `ansible-galaxy collectin list`, ja etsikää sieltä community general, Jos tämä löytyy, muita toimenpiteitä ei toistaiseksi tarvita.
+Ajakaa komento `ansible-galaxy collection list`, ja etsikää sieltä community general, Jos tämä löytyy, muita toimenpiteitä ei toistaiseksi tarvita.
 
 <img width="410" height="32" alt="kuva" src="https://github.com/user-attachments/assets/2d0b856c-b4ce-4324-b380-f9aecf11422a" />
 
 Jos tämä puuttuu, käyttäkää komentoa `ansible-galaxy collection install community.general`. Tämä komento asentaa **community general** työkalun, jos se ei ole valmiiksi asentunut ansiblen yhteydessä.
 
-Luodaan uusi hakemistorakenne komennolla `mkdir -p ufw/tasks/`, ja sitten microssa main.yml tiedosto `micro roles/ufw/tasks/main.yml`
+Luodaan uusi hakemistorakenne komennolla `mkdir -p roles/ufw/tasks/`, ja sitten microssa main.yml tiedosto `micro roles/ufw/tasks/main.yml`
 
 <img width="720" height="372" alt="kuva" src="https://github.com/user-attachments/assets/7effef8d-823b-429e-ade3-7a8dc4177472" />
 
