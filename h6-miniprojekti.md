@@ -72,24 +72,31 @@ Luodaan uusi hakemistorakenne komennolla `mkdir -p ufw/tasks/`, ja sitten micros
 -	Asennetaan apt:lla ufw eli palomuuri ja present varmistaa, että se on asennettu
 -	http-liikenne: rule: sallitaan liikenne, port:  80 = http-portti, proto: käytetään tcp-protokollaa
 -	https-liikenne: rule: sallitaan liikenne, port: 443=https-portti, proto: tcp-protokolla
--	aktivoidaan palomuuri: state: enabled: uudelleenlataa palomuurin, ja käynnistää palomuurin boottauksen yhteysessä. Default: deny: estää oletuksena saapuvan tai lähtevän liikennteen käytäntöjä (ansible.bultin.apt s.a;community.general.ufw s.a; Maneshwas 2025;)
+-	aktivoidaan palomuuri: state: enabled: uudelleenlataa palomuurin, ja käynnistää palomuurin boottauksen yhteysessä. Default: deny: estää oletuksena saapuvan tai lähtevän liikennteen käytäntöjä (ansible.bultin.apt s.a;community.general.ufw s.a; Maneshwas 2025)
 
+Lopuksi lisätää site.yml tiedostoon vielä ufw rooli `micro site.yml`
 
+<img width="728" height="137" alt="kuva" src="https://github.com/user-attachments/assets/84cb9a23-44aa-4e88-bcdd-92f4e52b1d7f" />
 
+Ansible-playbook ajossa huomaamme, että muutoksia on tullut.
 
+<img width="711" height="227" alt="kuva" src="https://github.com/user-attachments/assets/1dfab8d3-9943-424e-9467-d68da85df502" />
 
+Testataan vielä idempotenssi ajamalla playbook uudelleen.
 
+<img width="728" height="206" alt="kuva" src="https://github.com/user-attachments/assets/7e96ef1b-fcba-43f6-a05b-267473214fcc" />
 
+Lopuksi vielä varmistamme, että http- sekä https liikenne on sallittu, sekä palomuuri on päällä komennolla `sudo ufw status verbose`(ubuntu wiki). Huomaamme halutun lopputuloksen, että http- ja https liikenne on sallittu.
 
-
-
-
-
-
+<img width="594" height="218" alt="kuva" src="https://github.com/user-attachments/assets/88755d37-4376-4ee3-b760-5ed8da930917" />
 
 
 ## Lähteet
+- ansible.builtiin.apt s.a. ansible.builtiin.apt. Luettavissa: https://docs.ansible.com/projects/ansible/latest/collections/ansible/builtin/apt_module.html. Luettu: 28.11.2026.
 - ansible-builtin-file.ansible.builtin.file module – Manage files and file properties. Luettavissa: https://docs.ansible.com/projects/ansible/latest/collections/ansible/builtin/file_module.html. Luettu: 27.11.2026.
+- Community.general.uwf s.a. community.general.ufw module – Manage firewall with UFW. Luettavissa: https://docs.ansible.com/projects/ansible/latest/collections/community/general/ufw_module.html. Luettu: 28.11.2026.
+- Maneshwat 2025. Setting up a firewall with ansible and UFW: Luettavissa: https://dev.to/lovestaco/setting-up-a-firewall-with-ansible-and-ufw-3p9j. Luettu: 28.11.2026.
+- Ubuntu wiki s.a. UFW. Luettavissa: https://wiki.ubuntu.com/UFW. Luettu: 28.11.2026.
 - Karvinen 2026. SSH public key - Login without password. Luettavissa: https://terokarvinen.com/ssh-public-key-login-without-password/. Luettu: 27.11.2026.
 - Linux filesystem hierarchy. 1.19. /srv. Luettavissa: https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/srv.html. Luettu: 27.11.2026
   
