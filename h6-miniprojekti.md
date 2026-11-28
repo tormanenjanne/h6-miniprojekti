@@ -57,7 +57,28 @@ komennolla tree /srv/media näyttää, että hakemistot ollaan nyt lisätty. Sek
 
 <img width="1093" height="279" alt="kuva" src="https://github.com/user-attachments/assets/e6f182a3-6cc5-456d-ba50-46ec235a9d39" />
 
-## Palomuurin asennus
+## Palomuurin asennus, http- ja https liikenteen salliminen sekä palomuurin käyttöönotto koneen käynnistäessä
+
+Ajakaa komento `ansible-galaxy collectin list`, ja etsikää sieltä community general, Jos tämä löytyy, muita toimenpiteitä ei toistaiseksi tarvita.
+
+<img width="410" height="32" alt="kuva" src="https://github.com/user-attachments/assets/2d0b856c-b4ce-4324-b380-f9aecf11422a" />
+
+Jos tämä puuttuu, käyttäkää komentoa `ansible-galaxy collection install community.general`. Tämä komento asentaa **community general** työkalun, jos se ei ole valmiiksi asentunut ansiblen yhteydessä.
+
+Luodaan uusi hakemistorakenne komennolla `mkdir -p ufw/tasks/`, ja sitten microssa main.yml tiedosto `micro roles/ufw/tasks/main.yml`
+
+<img width="720" height="372" alt="kuva" src="https://github.com/user-attachments/assets/7effef8d-823b-429e-ade3-7a8dc4177472" />
+
+-	Asennetaan apt:lla ufw eli palomuuri ja present varmistaa, että se on asennettu
+-	http-liikenne: rule: sallitaan liikenne, port:  80 = http-portti, proto: käytetään tcp-protokollaa
+-	https-liikenne: rule: sallitaan liikenne, port: 443=https-portti, proto: tcp-protokolla
+-	aktivoidaan palomuuri: state: enabled: uudelleenlataa palomuurin, ja käynnistää palomuurin boottauksen yhteysessä. Default: deny: estää oletuksena saapuvan tai lähtevän liikennteen käytäntöjä (ansible.bultin.apt s.a;community.general.ufw s.a; Maneshwas 2025;)
+
+
+
+
+
+
 
 
 
