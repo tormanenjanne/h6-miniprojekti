@@ -1,0 +1,23 @@
+- name: asennetaan ufw palomuuri
+  ansible.builtin.apt:
+    name: ufw
+    state: present
+
+- name: sallitaan http-liikenne
+  community.general.ufw:
+    rule: allow
+    port: '80'
+    proto: tcp
+
+- name: sallitaan https-liikenne
+  community.general.ufw:
+    rule: allow
+    port: '443'
+    proto: tcp
+
+- name: aktivoidaan palomuuri
+  community.general.ufw:
+    state: enabled
+    default: deny
+  
+                 
